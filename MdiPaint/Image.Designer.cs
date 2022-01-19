@@ -29,10 +29,20 @@ namespace MdiPaint
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Image
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Image";
             this.Text = "Image";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawStart);
+            this.MouseLeave += new System.EventHandler(this.leavingForm);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.draw);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
