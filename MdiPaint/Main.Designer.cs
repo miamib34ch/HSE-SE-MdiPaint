@@ -1,7 +1,7 @@
 ﻿
 namespace MdiPaint
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -31,14 +31,14 @@ namespace MdiPaint
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.IsMdiContainer = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Main";
+            this.Text = "MDI Paint";
             this.ResumeLayout(false);
 
         }
