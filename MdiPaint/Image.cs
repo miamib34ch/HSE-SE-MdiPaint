@@ -17,6 +17,7 @@ namespace MdiPaint
         Main parentForm;
         public Color penColor;
         Graphics img;
+        Bitmap newImg = new Bitmap(200,300);
 
         public Image(Main parentForm)
         {
@@ -29,8 +30,9 @@ namespace MdiPaint
         {
             if (e.Button == MouseButtons.Left)
             {
-                img = CreateGraphics();
+                img = Graphics.FromImage(newImg); // CreateGraphics();
                 img.DrawLine(new Pen(penColor),X,Y,e.X,e.Y);
+                Invalidate();
                 X = e.X;
                 Y = e.Y;
             }
@@ -50,6 +52,17 @@ namespace MdiPaint
         {
             X = e.X;
             Y = e.Y;
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            CreateGraphics().DrawImage(newImg, 0, 0); // 0 0 - место на форме с которого срисовывается
+        }
+
+        public void SaveAs(string path)
+        {
+            newImg.Save(path+".bmp");
         }
     }
 }

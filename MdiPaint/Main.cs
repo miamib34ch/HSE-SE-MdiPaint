@@ -85,5 +85,25 @@ namespace MdiPaint
             }
             penColor = colorChoice.Color;
         }
+
+        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var dlg = new SaveFileDialog();
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+                var doc = (Image)ActiveMdiChild;
+                doc.SaveAs(dlg.FileName);
+            }
+        }
+
+        private void сохранитьКакToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void файлToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            сохранитьКакToolStripMenuItem.Enabled = ActiveMdiChild != null;
+        }
     }
 }
