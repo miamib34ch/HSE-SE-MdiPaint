@@ -118,7 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PaintBrush_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PaintBrush_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ColorPalette_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColorPalette_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColorWheel_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ColorWheel_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_01_Logo_HSE_full_rus_Pantone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01_Logo_HSE_full_rus_Pantone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="выбор" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\выбор.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="зелёный" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\зелёный.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="красный" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\красный.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="отдалить" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\отдалить.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="приблизить" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\приблизить.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="синий" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\синий.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,7 +1,7 @@
 ﻿
 namespace MdiPaint
 {
-    partial class Image
+    partial class DocumentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,17 +31,21 @@ namespace MdiPaint
         {
             this.SuspendLayout();
             // 
-            // Image
+            // DocumentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.DoubleBuffered = true;
-            this.Name = "Image";
+            this.Name = "DocumentForm";
             this.Text = "Image";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DocumentForm_FormClosing);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawStart);
             this.MouseLeave += new System.EventHandler(this.leavingForm);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.draw);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DocumentForm_MouseUp);
             this.ResumeLayout(false);
 
         }
