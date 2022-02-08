@@ -248,7 +248,7 @@ namespace MdiPaint
                 if (ActiveMdiChild != null)
                 {
                     ((DocumentForm)ActiveMdiChild).Image = new Bitmap(((DocumentForm)ActiveMdiChild).Image, new Size(((DocumentForm)ActiveMdiChild).Image.Width - 10, ((DocumentForm)ActiveMdiChild).Image.Height - 10));
-                    ((DocumentForm)ActiveMdiChild).newUpdate();
+                    ((DocumentForm)ActiveMdiChild).Update();
                 }
             }
             catch
@@ -264,7 +264,7 @@ namespace MdiPaint
                 if (ActiveMdiChild != null)
                 {
                 ((DocumentForm)ActiveMdiChild).Image = new Bitmap(((DocumentForm)ActiveMdiChild).Image, new Size(((DocumentForm)ActiveMdiChild).Image.Width + 10, ((DocumentForm)ActiveMdiChild).Image.Height + 10));
-                ((DocumentForm)ActiveMdiChild).newUpdate();
+                ((DocumentForm)ActiveMdiChild).Update();
                 }
             }
             catch

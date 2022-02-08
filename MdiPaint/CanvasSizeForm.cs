@@ -19,7 +19,6 @@ namespace MdiPaint
         {
             InitializeComponent();
             mainForm = m;
-            label3.Text = $"Текущий размер:\nШирина: {mainForm.WidthImage}\nВысота: {mainForm.HeightImage}";
         }
 
         private void button1_Click(object sender, EventArgs e)
