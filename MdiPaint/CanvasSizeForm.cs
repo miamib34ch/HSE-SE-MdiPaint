@@ -19,19 +19,55 @@ namespace MdiPaint
         {
             InitializeComponent();
             mainForm = m;
-            label3.Text = $"Текущий размер:\nШирина: {mainForm.WidthImage}\nВысота: {mainForm.HeightImage}";
+            textBox1.Text = $"{mainForm.WidthImage}";
+            textBox2.Text = $"{mainForm.HeightImage}";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (int.TryParse(textBox1.Text, out int Width) && int.TryParse(textBox2.Text, out int Height))
             {
-                mainForm.WidthImage = Width;
-                mainForm.HeightImage = Height;
+                if (Width > 0 && Height > 0) {
+                    mainForm.WidthImage = Width;
+                    mainForm.HeightImage = Height; }
             }
             else
             {
                 
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int w) || textBox1.Text == "")
+            {
+                if (w <= 0 && textBox1.Text != "")
+                {
+                    MessageBox.Show("Вы ввели отрицательное число, введите положительное!");
+                    textBox1.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Вы ввели символ, вводите цифры!");
+                textBox1.Clear();
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox2.Text, out int w) || textBox2.Text == "")
+            {
+                if (w <= 0 && textBox2.Text != "")
+                {
+                    MessageBox.Show("Вы ввели отрицательное число, введите положительное!");
+                    textBox1.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Вы ввели символ, вводите цифры!");
+                textBox2.Clear();
             }
         }
     }

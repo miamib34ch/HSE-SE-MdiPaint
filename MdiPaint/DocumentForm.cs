@@ -17,7 +17,7 @@ namespace MdiPaint
         private int X, Y;
         private MainForm parentForm;
         private Graphics img;
-        private bool localChanged;
+        public bool localChanged;
         public Bitmap Image { get; set; }
         private Bitmap tmp { get; set; }
         public static int starEnd { get; set; }
@@ -32,6 +32,7 @@ namespace MdiPaint
             img.Clear(Color.White);
             localChanged = true;
             starEnd = 5;
+            this.Text = "Image" + $"{parentForm.count}";
         }
 
         public DocumentForm(MainForm parentForm, string filename)
@@ -72,6 +73,7 @@ namespace MdiPaint
                             Y = e.Y;
                             Invalidate();
                             parentForm.changed = true;
+                            localChanged = true;
                             break;
                         case Tools.Eraser:
                             img = Graphics.FromImage(Image);
@@ -83,6 +85,7 @@ namespace MdiPaint
                             Y = e.Y;
                             Invalidate();
                             parentForm.changed = true;
+                            localChanged = true;
                             break;
                         case Tools.Line:
                             tmp = new Bitmap(Image.Width, Image.Height);
@@ -130,6 +133,7 @@ namespace MdiPaint
                     tmp = new Bitmap(1, 1);
                     Invalidate();
                     parentForm.changed = true;
+                    localChanged = true;
                 }
                 if (parentForm.tools == Tools.Ellipse)
                 {
@@ -138,6 +142,7 @@ namespace MdiPaint
                     tmp = new Bitmap(1, 1);
                     Invalidate();
                     parentForm.changed = true;
+                    localChanged = true;
                 }
                 if (parentForm.tools == Tools.Star)
                 {
@@ -147,6 +152,7 @@ namespace MdiPaint
                     tmp = new Bitmap(1, 1);
                     Invalidate();
                     parentForm.changed = true;
+                    localChanged = true;
                 }
             }
             catch { }
@@ -174,7 +180,7 @@ namespace MdiPaint
         {
             if (localChanged)
             {
-                var r = MessageBox.Show("Изображение было изменено. Сохранить?", "Сохранение изображения", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                var r = MessageBox.Show($"Изображение {this.Text} было изменено. Сохранить?", "Сохранение изображения", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 switch (r)
                 {
                     case DialogResult.Cancel:
@@ -206,6 +212,7 @@ namespace MdiPaint
                 }
                 Invalidate();
                 parentForm.changed = true;
+                localChanged = true;
             }
             catch { }
         } //изменение размера холста

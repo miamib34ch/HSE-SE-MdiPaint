@@ -41,8 +41,9 @@ namespace MdiPaint
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.пероToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.линияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.эллипсToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.линияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.звёздочкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ластикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
@@ -68,7 +69,6 @@ namespace MdiPaint
             this.упорядочитьЗначкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.посмотретьСправкуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.звёздочкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -177,28 +177,35 @@ namespace MdiPaint
             // 
             this.пероToolStripMenuItem.Image = global::MdiPaint.Properties.Resources.выбор;
             this.пероToolStripMenuItem.Name = "пероToolStripMenuItem";
-            this.пероToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.пероToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.пероToolStripMenuItem.Text = "Перо";
             this.пероToolStripMenuItem.Click += new System.EventHandler(this.пероToolStripMenuItem_Click);
-            // 
-            // линияToolStripMenuItem
-            // 
-            this.линияToolStripMenuItem.Name = "линияToolStripMenuItem";
-            this.линияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.линияToolStripMenuItem.Text = "Линия";
-            this.линияToolStripMenuItem.Click += new System.EventHandler(this.линияToolStripMenuItem_Click);
             // 
             // эллипсToolStripMenuItem
             // 
             this.эллипсToolStripMenuItem.Name = "эллипсToolStripMenuItem";
-            this.эллипсToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.эллипсToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.эллипсToolStripMenuItem.Text = "Эллипс";
             this.эллипсToolStripMenuItem.Click += new System.EventHandler(this.эллипсToolStripMenuItem_Click);
+            // 
+            // линияToolStripMenuItem
+            // 
+            this.линияToolStripMenuItem.Name = "линияToolStripMenuItem";
+            this.линияToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.линияToolStripMenuItem.Text = "Линия";
+            this.линияToolStripMenuItem.Click += new System.EventHandler(this.линияToolStripMenuItem_Click);
+            // 
+            // звёздочкаToolStripMenuItem
+            // 
+            this.звёздочкаToolStripMenuItem.Name = "звёздочкаToolStripMenuItem";
+            this.звёздочкаToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.звёздочкаToolStripMenuItem.Text = "Звёздочка";
+            this.звёздочкаToolStripMenuItem.Click += new System.EventHandler(this.звёздочкаToolStripMenuItem_Click);
             // 
             // ластикToolStripMenuItem
             // 
             this.ластикToolStripMenuItem.Name = "ластикToolStripMenuItem";
-            this.ластикToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ластикToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.ластикToolStripMenuItem.Text = "Ластик";
             this.ластикToolStripMenuItem.Click += new System.EventHandler(this.ластикToolStripMenuItem_Click);
             // 
@@ -214,6 +221,7 @@ namespace MdiPaint
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyUp);
+            this.toolStripTextBox2.TextChanged += new System.EventHandler(this.toolStripTextBox2_TextChanged);
             // 
             // toolStripButton1
             // 
@@ -398,13 +406,6 @@ namespace MdiPaint
             this.посмотретьСправкуToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.посмотретьСправкуToolStripMenuItem.Text = "&О программе...";
             this.посмотретьСправкуToolStripMenuItem.Click += new System.EventHandler(this.посмотретьСправкуToolStripMenuItem_Click);
-            // 
-            // звёздочкаToolStripMenuItem
-            // 
-            this.звёздочкаToolStripMenuItem.Name = "звёздочкаToolStripMenuItem";
-            this.звёздочкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.звёздочкаToolStripMenuItem.Text = "Звёздочка";
-            this.звёздочкаToolStripMenuItem.Click += new System.EventHandler(this.звёздочкаToolStripMenuItem_Click);
             // 
             // MainForm
             // 
